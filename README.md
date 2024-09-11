@@ -44,6 +44,8 @@ CREATE TABLE netflix
 ## Business Problems and Solutions
 
 -- 1. Count the number of Movies vs TV Shows
+
+
 select 
 	type,
     count(*)
@@ -54,6 +56,8 @@ group by
 
 
 -- 2. Find the most common rating for movies and TV shows
+
+
 with cte as (
 select 
 	type,rating
@@ -71,6 +75,8 @@ where rnk=1;
 
 
 -- 3. List all movies released in a specific year (e.g., 2020)
+
+
 select
 	*
 from 
@@ -81,6 +87,7 @@ where release_year=2020 and type='Movie';
 
 
 -- 4. Find the top 5 countries with the most content on Netflix
+
 
 WITH RECURSIVE split_strings AS (
     SELECT
